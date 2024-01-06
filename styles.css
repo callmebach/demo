@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #ccc;
+}
+
+.nav{
+  display: flex;
+  min-height: 42px;
+  background-color: rgb(249, 140, 140);
+  justify-content: space-between;
+}
+
+.nav-list{
+  padding-left: 0;
+  margin: 16px;
+}
+
+.nav-item{
+  list-style: none;
+  display: inline-block;
+  margin: 0 8px;
+  color: whitesmoke;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-item:active{
+  color: rgb(103, 103, 101);
+}
+
+
+.form-container{
+  max-width: 720px;
+  background-color: rgb(156, 245, 255);
+  padding: 16px;
+  margin: 32px auto 0 auto;
+  border-radius: 16px;
+}
+
+.form_row{
+  padding: 8px 0;
+  display: flex;
+}
+
+.form_label{
+  min-width: 80px;
+  color: rgb(46, 46, 46);
+  margin-left: 32px;
+}
+
+.form_input{
+  flex: 1;
+}
+
+.form_btn{
+  display: flex;
+  justify-content: center; /* Canh giữa theo chiều ngang */
+  align-items: center;
+}
+
+.form_btn BUTTON{
+    padding: 5px 20px;
+    margin: 0 10px; /* Khoảng cách giữa hai nút */
+    background-color: #4c9daf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form_btn button:active {
+  background-color: #2d5d68;
+}
