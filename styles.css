@@ -71,7 +71,7 @@ body {
 .form_btn BUTTON{
     padding: 5px 20px;
     margin: 0 10px; /* Khoảng cách giữa hai nút */
-    background-color: #4c9daf;
+    background-color: #7a93f5;
     color: white;
     border: none;
     border-radius: 5px;
@@ -80,5 +80,5 @@ body {
 }
 
 .form_btn button:active {
-  background-color: #2d5d68;
+  background-color: #302d68;
 }
