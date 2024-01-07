@@ -1,0 +1,145 @@
+body{
+    box-sizing: border-box;
+    font-family: 'Segoe UI';
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-success{
+    width: 100px;
+    height: 30px;
+    margin-right: 20px;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-success:active{
+    background-color: rgb(80, 161, 134);
+}
+
+.btn-warning{
+    width: 100px;
+    height: 30px;
+    margin-right: 20px;
+    background-color: rgb(255, 197, 127);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-warning:active{
+    background-color: rgb(169, 131, 85);;
+}
+
+.btn-error{
+    width: 100px;
+    height: 30px;
+    margin-right: 20px;
+    background-color: rgb(255, 127, 127);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-error:active{
+    background-color: rgb(161, 81, 81);
+}
+
+.toast{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px 0;
+    min-width: 400px;
+    max-width: 450px;
+    border-left: 4px solid;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    transition: all linear 0.5s;
+    z-index: 999;
+}
+
+.toast + .toast{
+    margin-top: 20px;
+}
+
+.toast__success{
+    border-color: aquamarine;
+}
+
+.toast__warning{
+    border-color: rgb(255, 185, 127);
+}
+
+.toast__error{
+    border-color: rgb(255, 105, 105);
+}
+
+.toast__success .icon-check{
+    color: aquamarine;
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+.toast__warning .icon-check{
+    color: rgb(255, 185, 127);
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+.toast__error .icon-check{
+    color: rgb(255, 105, 105);
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+.icon-close{
+    margin-right: 20px;
+    color: #ccc;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color;
+}
+
+.icon-close:active{
+    color: #333;
+}
+
+.title{
+    font-size: 18px;
+    font-family: 'Genava';
+    color: #333;
+    margin-left: 20px;
+    flex: 1;
+}
+
+#toast {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+}
+
+@keyframes slideInLeft{
+    from{
+        opacity: 0;
+        transform: translateX(calc(100% + 49px));
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut{
+    to{
+        opacity: 0;
+    }
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Web Page</title>
+    <link rel="stylesheet" href="example.css">
     <style>
         /* CSS styles go here */
         body {
@@ -33,8 +34,12 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            z-index: 1;
         }
     </style>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
 
@@ -70,5 +75,92 @@
         changeHeaderColor();
     </script>
 
+    <div class="btn">
+        <button onclick="showSuccessToast();" class="btn-success">Go To Next</button>
+        <button onclick="showWarningToast();" class="btn-warning">Ok</button>
+        <button onclick="showErrorToast();" class="btn-error">Try Again</button>
+    </div>
+
+    <div id="toast"></div>
+    
+
+
+    <script>
+        function toast({
+            title='',
+            type='info',
+            duration = 3000
+        }) {
+            const main = document.getElementById('toast');
+            if (main) {
+                const toast = document.createElement('div');
+
+                const autoRemoveID = setTimeout(function() {
+                    main.removeChild(toast)
+                }, duration + 1000);
+
+                toast.onclick = function(e) {
+                    if (e.target.closest('.icon-close')) {
+                        main.removeChild(toast);
+                        clearTimeout(autoRemoveID)
+                    }
+                }
+                const icons ={
+                    success:'checkmark-circle',
+                    warning:'alert-circle',
+                    error:'alert-circle',
+                };
+                const icon = icons[type];
+
+                const delay = (duration / 1000).toFixed(2);
+
+                toast.classList.add('toast', `toast__${type}`);
+
+                toast.style.animation = `slideInLeft ease 0.4s, fadeOut linear 1s ${delay}s forwards`;
+
+                toast.innerHTML = `
+                
+                    <div class="icon-check">
+                        <ion-icon name="${icon}"></ion-icon>
+                    </div>
+        
+                    <p class="title">${title}</p>
+        
+                    <div class="icon-close">
+                        <ion-icon name="close-circle"></ion-icon>
+                    </div>
+                    
+                </div>
+            
+                `;
+
+                main.appendChild(toast);
+
+                
+            }
+        }
+
+            function showSuccessToast() {
+                toast({
+                    title:"You are successed",
+                    type: "success",
+                    duration: 3000
+                })
+            }
+            function showWarningToast() {
+                toast({
+                    title:"Warning",
+                    type: "warning",
+                    duration: 3000
+                })
+            }
+            function showErrorToast() {
+                toast({
+                    title:"You are errored",
+                    type: "error",
+                    duration: 3000
+                })
+            }
+    </script>
 </body>
 </html>
