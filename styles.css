@@ -1,16 +1,6 @@
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-  background-color: #ccc;
+body{
+  padding: 20px;
+  font-family: 'Segoe UI'
 }
 
 .nav{
@@ -81,4 +71,106 @@ body {
 
 .form_btn button:active {
   background-color: #302d68;
+}
+
+
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+}
+
+.card{
+  width: calc(25% - 20px);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+  margin-left: 20px;
+}
+
+.card-image{
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-avatar{
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.card-user{
+  padding: 20px;
+}
+
+.card-user-top{
+  display: flex;
+  align-items: center;
+
+}
+
+.card-avatar{
+  width: 50px;
+  height: 50px;
+  border-radius: 100rem;
+  flex-shrink: 0;
+}
+
+.card-user-infor{
+  padding: 10px;
+  flex: 1; 
+}
+.card-user-name{
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.card-user-name ion-icon{
+  color: green;
+}
+
+.card-user-name2{
+  font-weight: 70;
+  color: #999;
+}
+
+.card-live{
+  display: flex;
+  align-items: center;
+  max-width: 70px;
+  max-height: 30px;
+  border-radius: 20px;
+  color: #ffffff;
+  background-color: rgb(255, 197, 88);
+  flex:1;
+}
+
+.card-live ion-icon{
+  margin: 0 10px 0 5px;
+}
+
+.card-user-bottom{
+  display: flex;
+  justify-content: space-around;
+}
+
+.info-live{
+  display: flex;
+  background-color: black;
+  padding: 0 10px;
+  border-radius: 20px;
+}
+
+.card-live-watching{
+  color: rgb(255, 255, 255);
+  align-self: center;
+  margin-right: 5px;
+}
+
+.info-live ion-icon{
+  color: rgb(255, 255, 255);
+  align-self: center;
 }
