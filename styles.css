@@ -174,3 +174,8 @@ body{
   color: rgb(255, 255, 255);
   align-self: center;
 }
+
+
+.card-live-title{
+  margin-left: 10px;
+}
